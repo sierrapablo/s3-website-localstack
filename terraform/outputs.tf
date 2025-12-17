@@ -1,16 +1,14 @@
-# Example outputs
-
-# Output from module variables
-output "hello_world_module" {
-  value = module.hello_world_module.message
+output "bucket_name" {
+  description = "Nombre del bucket"
+  value       = module.s3_website.bucket_name
 }
 
-# Output from terraform variables
-output "hello_world_variables" {
-  value = module.hello_world_variables.message
+output "bucket_arn" {
+  description = "ARN del bucket"
+  value       = module.s3_website.bucket_arn
 }
 
-# Output from main.tf variables
-output "hello_world_main" {
-  value = module.hello_world_main.message
+output "website_endpoint" {
+  description = "Endpoint de la web estática"
+  value       = module.s3_website.website_endpoint
 }

@@ -2,4 +2,14 @@
 
 # Rename this file to terraform.tfvars and fill in the values for your environment.
 
-example = "Hello from terraform.tfvars!"
+aws_region = "eu-west-1"
+
+localstack_endpoint = "http://localhost:4566"
+localstack_dummy = "test"
+
+bucket_name = "static-website-localstack"
+index_document = "index.html"
+error_document = "error.html"
+tags = {
+    Environment = "LocalStack"
+}
